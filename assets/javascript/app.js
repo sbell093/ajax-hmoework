@@ -53,15 +53,12 @@ $("#add-character").on("click", function (event) {
     event.preventDefault();
     // This line grabs the input from the textbox
     var topic = $("#input").val().trim();
-
-    // Adding movie from the textbox to our array
     cartoons.push(topic);
 
-    // Calling renderButtons which handles the processing of our movie array
+    // Calling renderButtons which handles the processing of our cartoon array
     renderButtons();
 });
 
-// Adding a click event listener to all elements with a class of "movie"
 $(document).on("click", ".topic", displayCharacters);
 
 // Calling the renderButtons function to display the intial buttons
